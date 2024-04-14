@@ -1,113 +1,97 @@
+"use client"
 import Image from "next/image";
+import Header from "./components/Header";
+import SplideCarousel from "./components/SplideCarousel";
+import { motion } from 'framer-motion';
+import card1 from '../../public/images/png/card1.jpg'
+import card2 from '../../public/images/png/card2.jpg'
+import card3 from '../../public/images/png/card3.jpg'
+import card4 from '../../public/images/png/card4.jpg'
+import PointerFollow from "./components/PointerFollow";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <Header />
+      <main className="">
+        <div className="mb-28">
+          <div className="flex flex-col sm:flex-row sm:justify-center sm:gap-10 max-sm:flex-wrap">
+            <h1 className="font-pacifico font-extrabold text-6xl sm:text-9xl text-[#0A2F38]">Biz</h1>
+            <div className="w-full sm:w-[650px] flex flex-col">
+              <h2 className="font-bold text-2xl sm:text-4xl text-[#0A2F38] mt-8 sm:mt-24 mb-6">bolalar bog'chasimiz va bolalik bizning ishtiyoqimizdir</h2>
+              <p className="text-[#0A2F38]">Biz sizni Skole o'quv markazida ishlayotgan ajoyib, ishtiyoqli va sodiq o'qituvchilar bilan tanishtirishdan xursandmiz. Iltimos, “Bizning oilamiz!” bilan tanishish uchun bir oz vaqt ajrating. Biz ularning har birini nima uchun bolalar bilan ishlashni yaxshi ko'rishlarini tasvirlashga taklif qildik.</p>
+            </div>
+          </div>
         </div>
-      </div>
+        {/* section finished */}
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        <div className="">
+          <div className="flex flex-col lg:flex-row items-center justify-around mb-36">
+            <div className="w-full lg:w-[420px] h-auto mb-8 lg:mb-0">
+              <SplideCarousel />
+            </div>
+            <div className="flex flex-col gap-8 lg:gap-16 text-center lg:text-left">
+              <h4 className="cursor-pointer font-bold text-xl text-[#0A303A]"><span className="font-bold text-[#167287]">1.</span> O'z Uyingizga o'xshash muhit </h4>
+              <h4 className="cursor-pointer font-bold text-xl text-[#0A303A]"><span className="font-bold text-[#167287]">2.</span> Hafsizlik va Qo'riqlash hizmati </h4>
+              <h4 className="cursor-pointer font-bold text-xl text-[#0A303A]"><span className="font-bold text-[#167287]">3.</span> Sifatli o'qitish tizimi </h4>
+              <h4 className="cursor-pointer font-bold text-xl text-[#0A303A]"><span className="font-bold text-[#167287]">4.</span> O'yna va o'rgan </h4>
+            </div>
+            <div className="text-center lg:text-left">
+              <Image width={210} height={238} src={'https://skole.vamtam.com/wp-content/uploads/2019/11/illustration-people-1.svg'} />
+              <motion.button
+                className='inline-block text-base px-3 py-2 bg-[#fff] text-[#E74C25] rounded-md font-bold hover:bg-[#0A303A] hover:text-white border border-[#E74C25] hover:border-none mt-4 lg:mt-0'
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}>
+                Ko'proq malumot
+              </motion.button>
+            </div>
+          </div>
+        </div>
+        {/* section finished */}
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        <div className="">
+          <div className="flex justify-center items-start">
+            <div className="mb-14">
+              <h1 className="font-pacifico font-bold text-4xl md:text-9xl text-[#0A2F38] mb-5 md:mb-0">Yoshlar</h1>
+              <h4 className="text-[#0A2F38] font-bold text-lg md:text-3xl max-sm:ml-0 ml-36">Biz har qanday vaqtda bolalarni qo'llab-quvvatlaymiz </h4>
+            </div>
+          </div>
+          <div className="flex gap-10 max-md:flex-row max-md:justify-between max-md:items-center max-sm:flex-wrap">
+            <div className="bg-[#FFDBD2] p-3 flex flex-col items-center rounded-2xl mb-5 md:mb-0 md:w-[30%] md:mr-5 max-sm:w-full">
+              <h2 className="font-bold text-center text-[#E95D3A] text-xl md:text-2xl mb-5">Chaqaloqlar</h2>
+              <Image className="rounded-xl mb-5" width={240} height={240} src={card1} />
+              <p className="text-center mb-5">Farzandingiz sizga tajriba uchun <br /> eng muhim ma'lumotlarni beradi.</p>
+              <span className="text-[#E95D3A] font-bold text-sm">3-12 oy 9:00 - 11:00</span>
+            </div>
+            <div className="bg-[#DFF8FF] p-3 flex flex-col items-center rounded-2xl mb-5 md:mb-0 md:w-[30%] md:mr-5">
+              <h2 className="font-bold text-center text-[#167287] text-xl md:text-2xl mb-5">Kichkintoy</h2>
+              <Image className="rounded-xl mb-5" width={240} height={240} src={card1} />
+              <p className="text-center mb-5">Bu kursimiz ichida uning jismoniy o'sishi va miyya rivojlanishi yaxshilanadi.</p>
+              <span className="text-[#167287] font-bold text-sm">3-12 oy 11:00 - 15:00</span>
+            </div>
+            <div className="bg-[#FFEFDF] p-3 flex flex-col items-center rounded-2xl mb-5 md:mb-0 md:w-[30%]">
+              <h2 className="font-bold text-center text-[#F68F29] text-xl md:text-2xl mb-5">Maktabgacha Ta'lim</h2>
+              <Image className="rounded-xl mb-5" width={240} height={240} src={card1} />
+              <p className="text-center mb-5">Farzandingiz bog'cha payitidan boshlab maktab yoshlari kabi ilm oladi.</p>
+              <span className="text-[#F68F29] font-bold text-sm">3-12 oy 16:00 - 17:00</span>
+            </div>
+            <div className="bg-[#E6F9E5] p-3 flex flex-col items-center rounded-2xl mb-5 md:mb-0 md:w-[30%]">
+              <h2 className="font-bold text-center text-[#5E9F5A] text-xl md:text-2xl mb-5">Ummumiy tarbiya</h2>
+              <Image className="rounded-xl mb-5" width={240} height={240} src={card1} />
+              <p className="text-center mb-5">Farzandingiz murakkab qiyinchiliklarni engish va o'z qobiliyatiga ishonch hosil qiladi.</p>
+              <span className="text-[#5E9F5A] font-bold text-sm">3-12 oy 19:00 - 21:00</span>
+            </div>
+          </div>
+        </div>
+        {/* section finished */}
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        <div className="">
+          <div className="">
+            
+          </div>
+        </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      </main>
+    </>
   );
 }
