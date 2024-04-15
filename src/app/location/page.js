@@ -15,11 +15,12 @@ const Location = () => {
           </div>
         </div>
       </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row gap-10">
+        <div className="flex flex-col md:flex-row gap-10 mb-20">
           <div className="md:w-[650px] w-full border">
             <iframe
-              className="w-[650px] h-[660px] max-lg:w-full max-md:h-auto"
+              className="w-[650px] h-[660px] max-lg:w-full max-md:h-auto "
               style={{ border: "1px solid #DEE0E4" }}
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3150.9190562690796!2d67.40348237569609!3d37.83878077196927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38b5538baffb0d43%3A0x911b4965f9bd576e!2sBandixon%20tumani%2014%20maktab!5e0!3m2!1sru!2s!4v1713186295526!5m2!1sru!2s"
               allowFullScreen=""
@@ -64,6 +65,43 @@ const Location = () => {
                 Ma'lumotlarni yuborish
               </motion.button>
             </div>
+          </div>
+        </div>
+
+        <div className="collapse collapse-plus bg-base-200 mb-8">
+          <input type="radio" name="my-accordion-3" defaultChecked />
+          <div className="collapse-title text-xl font-medium">
+            Surxandaryodagi Modern kids bo'g'chasi ochiq o'yin maydonchasiga egami?
+          </div>
+          <div className="collapse-content">
+            <p>Surxandaryodagi Modern kids to'g'ridan-to'g'ri markazda joylashgan noyob kombinatsiyalangan yopiq/tashqi o'yin maydonchasiga ega. O'yin maydonchalari barcha yoshdagi bolalar har kuni tashqarida o'ynashlari uchun bolalar bog'chasiga tayyorgarlik ko'rishlari uchun mos keladi.</p>
+          </div>
+        </div>
+        <div className="collapse collapse-plus bg-base-200 mb-8">
+          <input type="radio" name="my-accordion-3" />
+          <div className="collapse-title text-xl font-medium">
+            Surxandaryodagi Modern kids butun yil davomida ochiqmi?
+          </div>
+          <div className="collapse-content">
+            <p>Markazimiz nafaqat yil davomida ishlaydi, balki yil davomida ro'yxatga olish va bolalarni ro'yxatga olishni ham qabul qilamiz. Oilangiz uchun ishlaydigan jadval va boshlanish sanasi haqida ko'proq ma'lumot olish uchun bizga qo'ng'iroq qiling.</p>
+          </div>
+        </div>
+        <div className="collapse collapse-plus bg-base-200 mb-8">
+          <input type="radio" name="my-accordion-3" />
+          <div className="collapse-title text-xl font-medium">
+            Surxandaryodagi Modern kids maktabgacha ta'lim dasturiga egami?
+          </div>
+          <div className="collapse-content">
+            <p>Ha! Markazimiz 3 va undan katta yoshdagi bolalar uchun to'liq kunlik Maktabgacha ta'lim dasturini taklif etadi. Maktabgacha tarbiya - bu katta yil. Biz o'z dasturimizni farzandingiz tajribasining har bir jihatiga to'liq ishonch hosil qilish uchun ishlab chiqdik; salomatlik va xavfsizlikdan; maktabga tayyor o'quv dasturiga; tajribali o'qituvchilarning har tomonlama qo'llab-quvvatlashiga. Xuddi muhimi, bizning dasturimiz tadqiqot natijalariga ko'ra bolalarni bog'chaga eng yaxshi tayyorlaydigan narsaga asoslanadi ... va oldinda bo'lgan barcha katta qadamlar.</p>
+          </div>
+        </div>
+        <div className="collapse collapse-plus bg-base-200 mb-8">
+          <input type="radio" name="my-accordion-3" />
+          <div className="collapse-title text-xl font-medium">
+            Surxandaryodagi Modern kids o'z xodimlarining ma'lumotlarini tekshirish jarayoni qanday?
+          </div>
+          <div className="collapse-content">
+            <p>Bright Horizons barcha bo'lajak xodimlar va tez-tez tashrif buyuruvchilar haqida keng qamrovli fon tekshiruvini o'tkazadi. Ma'lumotni tekshirish so'nggi etti yil davomida shaxs yashagan, ishlagan yoki maktabda o'qigan barcha okruglarda o'tkazilgan sudlanganlik holatini tekshirishdan iborat. Tumandagi jinoiy qidiruvdan tashqari, jinsiy jinoyatchini qidirish, OFAC qidiruvi va ijtimoiy xavfsizlik tekshiruvi ham o'tkaziladi. Barcha joylashuv xodimlari uchun davlat tomonidan talab qilinadigan dastur litsenziyalash fonini tekshirishlari ham amalga oshiriladi.</p>
           </div>
         </div>
       </div>;

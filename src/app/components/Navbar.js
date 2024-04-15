@@ -41,7 +41,7 @@ const Navbar = () => {
                   <span className="dot"></span>
                 </motion.li>
                 <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                  <Link href={"#"}>Ota-Onalar</Link>
+                  <Link href={"/parents"}>Ota-Onalar</Link>
                   <span className="dot"></span>
                 </motion.li>
                 <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
