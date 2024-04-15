@@ -14,7 +14,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white ">
+    <nav className="bg-white">
       <div className="max-w-7xl mx-auto px-4 max-sm:mb-10">
         <div className=" flex justify-between h-16 flex-wrap max-sm:mt-5">
           <div className="flex items-center gap-12 max-sm:w-full max-sm:mb-5 max-sm:justify-between ">
@@ -29,7 +29,7 @@ const Navbar = () => {
                 transition={{ duration: 0.5 }}
               >
                 <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                  <Link href={"#"}>Bosh sahifa</Link>
+                  <Link href={"/"}>Bosh sahifa</Link>
                   <span className="dot"></span>
                 </motion.li>
                 <motion.li className='hover:text-[#E72929]' whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
@@ -45,7 +45,7 @@ const Navbar = () => {
                   <span className="dot"></span>
                 </motion.li>
                 <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                  <Link href={"#"}>Manzil</Link>
+                  <Link href={"/location"}>Manzil</Link>
                   <span className="dot"></span>
                 </motion.li>
               </motion.ul>
@@ -106,7 +106,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className={`nav-private ${isOpen ? 'block' : 'hidden'} md:hidden bg-white`}>
-      <div className="px-5 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col bg-white">
+        <div className="px-5 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col bg-white">
           <Link className='font-bold text-lg pt-2 pb-2 border-b text-[#E74C25]' href={"#"}>Home</Link>
           <Link className='font-bold text-lg pt-2 pb-2 border-b' href={"#"}>About</Link>
           <Link className='font-bold text-lg pt-2 pb-2 border-b' href={"#"}>Programs</Link>

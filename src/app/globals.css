@@ -17,17 +17,16 @@
 }
 
 .font-pacifico {
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
 }
 
 .font-catamaran {
-  font-family: 'Catamaran', sans-serif;
+  font-family: "Catamaran", sans-serif;
 }
-
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: #FFF;
+  background: #fff;
 }
 
 @layer utilities {
@@ -45,15 +44,15 @@ body {
 }
 
 .navbar li {
-  position: relative; 
+  position: relative;
 }
-.navbar li:hover{
-  color: #FFF;
+.navbar li:hover {
+  color: #fff;
 }
 
 .navbar a {
   text-decoration: none;
-  color: #0A303A;
+  color: #0a303a;
   font-weight: 700;
 }
 
@@ -64,7 +63,7 @@ body {
   transform: translateX(-50%);
   width: 8px;
   height: 8px;
-  background-color: #0A303A;
+  background-color: #0a303a;
   border-radius: 50%;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -74,25 +73,46 @@ body {
   opacity: 1;
 }
 
-/* .box {
-  width: 100px;
-  height: 100px;
-  background-color: #3498db;
-  border-radius: 8px;
-} */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
 
-.header{
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.header {
   object-fit: cover;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(../../public/images/png/920__95_992416171.jpg);
 }
-@media (max-width: 371px)  {
-  .nav-private{
+@media (max-width: 371px) {
+  .nav-private {
     margin-top: 60px;
-    background: #FFF;
-  } 
-  .header{
+    background: #fff;
+  }
+  .header {
     margin-top: 75px;
   }
 }
+.card{
+  cursor: pointer;
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.card:hover{
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 1.1);
+  border: 1px solid #0A303A;
+}
+/* .location{
+  background-image: url('https://skole.vamtam.com/wp-content/uploads/2019/11/illustration-tree-2.svg');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 300px;
+} */

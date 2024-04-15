@@ -7,13 +7,15 @@ import card1 from '../../public/images/png/card1.jpg'
 import card2 from '../../public/images/png/card2.jpg'
 import card3 from '../../public/images/png/card3.jpg'
 import card4 from '../../public/images/png/card4.jpg'
-import PointerFollow from "./components/PointerFollow";
+import NewsSection from "./components/NewSection";
+import HappySection from "./components/HappySection";
+import CardSection from "./components/CardSection";
 
 export default function Home() {
   return (
     <>
       <Header />
-      <main className="">
+      <main className="container mx-auto px-4">
         <div className="mb-28">
           <div className="flex flex-col sm:flex-row sm:justify-center sm:gap-10 max-sm:flex-wrap">
             <h1 className="font-pacifico font-extrabold text-6xl sm:text-9xl text-[#0A2F38]">Biz</h1>
@@ -61,36 +63,59 @@ export default function Home() {
               <h2 className="font-bold text-center text-[#E95D3A] text-xl md:text-2xl mb-5">Chaqaloqlar</h2>
               <Image className="rounded-xl mb-5" width={240} height={240} src={card1} />
               <p className="text-center mb-5">Farzandingiz sizga tajriba uchun <br /> eng muhim ma'lumotlarni beradi.</p>
-              <span className="text-[#E95D3A] font-bold text-sm">3-12 oy 9:00 - 11:00</span>
+              <span className="text-[#E95D3A] font-bold text-sm mt-14">3-12 oy 9:00 - 11:00</span>
             </div>
             <div className="bg-[#DFF8FF] p-3 flex flex-col items-center rounded-2xl mb-5 md:mb-0 md:w-[30%] md:mr-5">
               <h2 className="font-bold text-center text-[#167287] text-xl md:text-2xl mb-5">Kichkintoy</h2>
-              <Image className="rounded-xl mb-5" width={240} height={240} src={card1} />
+              <Image className="rounded-xl mb-5" width={240} height={240} src={card2} />
               <p className="text-center mb-5">Bu kursimiz ichida uning jismoniy o'sishi va miyya rivojlanishi yaxshilanadi.</p>
-              <span className="text-[#167287] font-bold text-sm">3-12 oy 11:00 - 15:00</span>
+              <span className="text-[#167287] font-bold text-sm mt-6">3-12 oy 11:00 - 15:00</span>
             </div>
             <div className="bg-[#FFEFDF] p-3 flex flex-col items-center rounded-2xl mb-5 md:mb-0 md:w-[30%]">
               <h2 className="font-bold text-center text-[#F68F29] text-xl md:text-2xl mb-5">Maktabgacha Ta'lim</h2>
-              <Image className="rounded-xl mb-5" width={240} height={240} src={card1} />
+              <Image className="rounded-xl mb-5" width={240} height={240} src={card3} />
               <p className="text-center mb-5">Farzandingiz bog'cha payitidan boshlab maktab yoshlari kabi ilm oladi.</p>
-              <span className="text-[#F68F29] font-bold text-sm">3-12 oy 16:00 - 17:00</span>
+              <span className="text-[#F68F29] font-bold text-sm mt-8">3-12 oy 16:00 - 17:00</span>
             </div>
             <div className="bg-[#E6F9E5] p-3 flex flex-col items-center rounded-2xl mb-5 md:mb-0 md:w-[30%]">
               <h2 className="font-bold text-center text-[#5E9F5A] text-xl md:text-2xl mb-5">Ummumiy tarbiya</h2>
-              <Image className="rounded-xl mb-5" width={240} height={240} src={card1} />
-              <p className="text-center mb-5">Farzandingiz murakkab qiyinchiliklarni engish va o'z qobiliyatiga ishonch hosil qiladi.</p>
-              <span className="text-[#5E9F5A] font-bold text-sm">3-12 oy 19:00 - 21:00</span>
+              <Image className="rounded-xl mb-5" width={240} height={240} src={card4} />
+              <p className="text-center mb-5 ">Farzandingiz murakkab qiyinchiliklarni engish va o'z qobiliyatiga ishonch hosil qiladi.</p>
+              <span className="text-[#5E9F5A] font-bold text-sm ">3-12 oy 19:00 - 21:00</span>
             </div>
           </div>
         </div>
         {/* section finished */}
 
-        <div className="">
-          <div className="">
-            
+        <div className="mt-36">
+          <h1 className="font-pacifico font-bold text-4xl md:text-9xl text-[#0A2F38] ml-72 mb-20 max-md:mb-3 max-md:ml-0">Keling</h1>
+          <div className="flex gap-10 justify-center max-md:flex-wrap-reverse">
+            <Image width={210} height={238} src={'https://skole.vamtam.com/wp-content/uploads/2019/11/illustration-people-2.svg'} />
+            <div className="">
+              <h4 className="text-[#0A2F38] font-bold text-lg md:text-3xl max-sm:ml-0 mb-6 max-md:mb-3">va atrofga nazar tashlang</h4>
+              <p className="w-[480px] max-md:w-full">Biz sizni qiziqtirgan hamma narsani tushuntiramiz. Yangi sessiyamizga qo'shiling. Agar sizda biron bir savol yoki so'rovingiz bo'lsa, quyida keltirilgan ma'lumotlar bo'yicha biz bilan bog'laning yoki muqobil ravishda quyida joylashgan onlayn so'rov formamizni to'ldirishingiz mumkin va biz sizga imkon qadar tezroq javob beramiz...</p>
+              <div className="flex gap-3 items-center mt-5 max-md:flex-wrap">
+                <motion.button
+                  className='inline-block text-base px-3 py-2 bg-[#E74C25] text-[#fff] rounded-md font-bold hover:bg-[#0A303A] hover:text-white border border-[#E74C25] hover:border-none mt-4 lg:mt-0'
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}>
+                  Ekskursiyani rejalashtiring
+                </motion.button>
+                <p className="max-md:hidden">yoki</p>
+                <motion.button
+                  className='inline-block text-base px-3 py-2 bg-[#fff] text-[#E74C25] rounded-md font-bold hover:bg-[#0A303A] hover:text-white border border-[#E74C25] hover:border-none mt-4 lg:mt-0'
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}>
+                  bizning yangi sessiyamizga qo'shiling
+                </motion.button>
+              </div>
+            </div>
           </div>
         </div>
-
+        {/* section finished */}
+        <NewsSection />
+        <HappySection />
+        <CardSection />
       </main>
     </>
   );
