@@ -37,7 +37,7 @@ const Navbar = () => {
                   <span className="dot"></span>
                 </motion.li>
                 <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                  <Link href={"#"}>Boshqaruv</Link>
+                  <Link href={"/admission"}>Qabullar</Link>
                   <span className="dot"></span>
                 </motion.li>
                 <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
@@ -108,10 +108,9 @@ const Navbar = () => {
       <div className={`nav-private ${isOpen ? 'block' : 'hidden'} md:hidden bg-white`}>
         <div className="px-5 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col bg-white">
           <Link className='font-bold text-lg pt-2 pb-2 border-b text-[#E74C25]' href={"#"}>Home</Link>
-          <Link className='font-bold text-lg pt-2 pb-2 border-b' href={"#"}>About</Link>
-          <Link className='font-bold text-lg pt-2 pb-2 border-b' href={"#"}>Programs</Link>
-          <Link className='font-bold text-lg pt-2 pb-2 border-b' href={"#"}>Parents</Link>
-          <Link className='font-bold text-lg pt-2 pb-2 border-b' href={"#"}>Location</Link>
+          <Link className='font-bold text-lg pt-2 pb-2 border-b' href={"#"}>Biz haqimizda</Link>
+          <Link className='font-bold text-lg pt-2 pb-2 border-b' href={"#"}>Ota-onalar</Link>
+          <Link className='font-bold text-lg pt-2 pb-2 border-b' href={"#"}>Manzil</Link>
         </div>
       </div>
     </nav>

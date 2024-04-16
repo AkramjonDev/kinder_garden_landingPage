@@ -56,7 +56,7 @@ const Page = () => {
             </div>
             <div className="">
                 <h1 className="font-pacifico font-bold text-4xl md:text-9xl text-[#0A2F38] ml-72 mb-20 max-md:mb-3 max-md:ml-0">Keling</h1>
-                <div className="flex gap-10 ml-64">
+                <div className="flex gap-10 ml-64 max-md:flex-wrap-reverse max-md:ml-0  ">
                     <div className="flex flex-col">
                         <Image width={240} height={240} src={'https://skole.vamtam.com/wp-content/uploads/2019/11/illustration-people-2.svg'} />
                         <h5 className="font-bold text-2xl mb-3">Surxondaryo viloyati</h5>

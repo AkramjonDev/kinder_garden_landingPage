@@ -43,7 +43,7 @@ const Footer = () => {
                   className='hover:text-[#E72929]'
                   whileHover={{ scale: 1 }}
                 >
-                  <Link href={'#'}>Boshqaruv</Link>
+                  <Link href={'#'}>Qabullar</Link>
                 </motion.li>
                 <motion.li
                   className='hover:text-[#E72929]'
@@ -71,7 +71,7 @@ const Footer = () => {
                   whileHover={{ scale: 1 }}
                   whileTap={{ scale: 1 }}
                 >
-                  <Link href={'#'}>Location</Link>
+                  <Link href={'#'}>Manzil</Link>
                 </motion.li>
               </motion.ul>
             </div>
