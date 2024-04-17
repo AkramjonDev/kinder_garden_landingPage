@@ -22,11 +22,9 @@ const Location = () => {
             <iframe
               className="w-[650px] h-[660px] max-lg:w-full max-md:h-auto "
               style={{ border: "1px solid #DEE0E4" }}
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3150.9190562690796!2d67.40348237569609!3d37.83878077196927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38b5538baffb0d43%3A0x911b4965f9bd576e!2sBandixon%20tumani%2014%20maktab!5e0!3m2!1sru!2s!4v1713186295526!5m2!1sru!2s"
-              allowFullScreen=""
-              loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+              loading="lazy"
+              allowFullScreen="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d196.94083311818838!2d67.44850851099446!3d37.83563735323766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38b5550000fba693%3A0xd40666afc2998415!2sSurxondaryo%20viloyati%20Qumqo&#39;rg&#39;on%20tumani%208-Davlat%20maktabgacha%20ta&#39;lim%20tashkiloti!5e0!3m2!1sru!2s!4v1713381558506!5m2!1sru!2s" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div className="flex flex-col flex-grow">
             <h3 className="font-bold text-xl md:text-2xl mb-10">Ekskursiyani rejalashtiring</h3>
@@ -36,8 +34,7 @@ const Location = () => {
             </div>
             <input className="p-2 outline-none border rounded-md focus:border-2 focus:font-medium mb-6" placeholder="Email" type="email" />
             <div className="flex gap-3 mb-6 md:flex-row md:gap-3 max-md:flex-wrap max-md:w-full">
-              <input className="p-2 max-md:w-full outline-none border rounded-md focus:border-2 focus:font-medium" type="number" placeholder="ZIP code" />
-              <input className="p-2 max-md:w-full outline-none border rounded-md focus:border-2 focus:font-medium" type="number" placeholder="Phone Number" />
+              <input className="p-2 w-full max-md:w-full outline-none border rounded-md focus:border-2 focus:font-medium" type="number" placeholder="Phone Number" />
             </div>
             <div className="flex flex-col mb-6">
               <p>Qancha vaqt farzandingizni o'qishini xohlaysiz ? <span className="text-[#E72929]">*</span></p>

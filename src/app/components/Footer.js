@@ -58,29 +58,23 @@ const Footer = () => {
                   className='hover:text-[#E72929]'
                   whileHover={{ scale: 1 }}
                 >
-                  <Link href={'#'}>Blog</Link>
-                </motion.li>
-                <motion.li
-                  className='hover:text-[#E72929]'
-                  whileHover={{ scale: 1 }}
-                >
-                  <Link href={'#'}>Biz haqimizda</Link>
+                  <Link href={'/about'}>Biz haqimizda</Link>
                 </motion.li>
                 <motion.li
                   className='hover:text-[#E72929]'
                   whileHover={{ scale: 1 }}
                   whileTap={{ scale: 1 }}
                 >
-                  <Link href={'#'}>Manzil</Link>
+                  <Link href={'/location'}>Manzil</Link>
                 </motion.li>
               </motion.ul>
             </div>
-            <Link href={"#"} className="text-[#0A303A] text-3xl font-extrabold max-md:mb-5">Skole</Link>
+            <Link href={"/"} className="text-[#0A303A] text-3xl font-extrabold max-md:mb-5">Modernkids</Link>
             <div className='max-md:text-center'>
               <p>Surxondaryo viloyati  <br />Qo'mqo'rg'on tumani</p>
               {/* The location page link must be connected */}
               <Link className='text-[#E72929] hover:text-[#0A303A]' href={'#'}>Google map</Link>
-              <p>Telefon raqamimiz: <span className='text-[#E74C25] hover:text-[#0A303A] cursor-pointer'>+1 541-754-3010​</span> </p>
+              <p>Telefon raqamimiz: <span className='text-[#E74C25] hover:text-[#0A303A] cursor-pointer'>+998917847242​</span> </p>
               <Link className='text-[#E74C25] hover:text-[#0A303A]' href={'#'}>hi@kindergarten.com</Link>
             </div>
             <div className=''>
@@ -88,7 +82,7 @@ const Footer = () => {
                 className='inline-block text-base px-5 py-2 bg-[#E74C25] text-[#fff] rounded-md font-bold hover:bg-[#0A303A] mb-12 mt-12'
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}>
-                tashrif buyuring
+                <Link href={"https://www.google.com/maps/place/Surxondaryo+viloyati+Qumqo'rg'on+tumani+8-Davlat+maktabgacha+ta'lim+tashkiloti/@37.8356374,67.4485085,21z/data=!4m6!3m5!1s0x38b5550000fba693:0xd40666afc2998415!8m2!3d37.8355353!4d67.4485415!16s%2Fg%2F11y3dnyd_r?entry=ttu"}>tashrif buyuring  </Link>
               </motion.button>
               {/* social media */}
               <motion.ul

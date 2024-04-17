@@ -19,7 +19,7 @@ const Navbar = () => {
         <div className=" flex justify-between h-16 flex-wrap max-sm:mt-5">
           <div className="flex items-center gap-12 max-sm:w-full max-sm:mb-5 max-sm:justify-between ">
             <div className="flex-shrink-0 flex items-center">
-              <Link href={"#"} className="text-[#0A303A] text-3xl font-extrabold">Skole</Link>
+              <Link href={"/"} className="text-[#0A303A] text-3xl font-extrabold">Modernkids</Link>
             </div>
             <div className="hidden md:block">
               <motion.ul
@@ -94,13 +94,13 @@ const Navbar = () => {
           <div className='flex gap-4 items-center max-sm:w-full max-sm:justify-between max-sm:flex-wrap'>
             <div className='flex gap-3 items-center '>
               <FontAwesomeIcon className='text-[#167287]' icon={faPhone} />
-              <span className='text-[#167287] hover:text-[#E74C25] cursor-pointer'>+1 541-754-3010​</span>
+              <span className='text-[#167287] hover:text-[#E74C25] cursor-pointer'>+998917847242​​</span>
             </div>
             <motion.button
               className='inline-block text-base px-5 py-2 bg-[#E74C25] text-[#fff] rounded-md font-bold hover:bg-[#0A303A]'
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}>
-              tashrif buyuring
+              <Link href={"https://www.google.com/maps/place/Surxondaryo+viloyati+Qumqo'rg'on+tumani+8-Davlat+maktabgacha+ta'lim+tashkiloti/@37.8356374,67.4485085,21z/data=!4m6!3m5!1s0x38b5550000fba693:0xd40666afc2998415!8m2!3d37.8355353!4d67.4485415!16s%2Fg%2F11y3dnyd_r?entry=ttu"}>tashrif buyuring  </Link>
             </motion.button>
           </div>
         </div>

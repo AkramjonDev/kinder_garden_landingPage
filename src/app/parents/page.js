@@ -62,7 +62,7 @@ const Page = () => {
                         <h5 className="font-bold text-2xl mb-3">Surxondaryo viloyati</h5>
                         <p>Qo'mqo'rg'on tumani</p>
                         <h5 className="font-bold text-lg">Telefon raqamimiz:​</h5>
-                        <span className="text-[#E72929]">+1 541-754-3010</span>
+                        <span className="text-[#E72929]">+998917847242​</span>
                         <h5 className="font-bold text-lg">Email</h5>
                         <span className="text-[#E72929]">hi@kindergarten.com</span>
                     </div>
@@ -75,8 +75,7 @@ const Page = () => {
                         </div>
                         <input className="p-2 outline-none border rounded-md focus:border-2 focus:font-medium mb-6" placeholder="Email" type="email" />
                         <div className="flex gap-3 mb-6 md:flex-row md:gap-3 max-md:flex-wrap max-md:w-full">
-                            <input className="p-2 max-md:w-full outline-none border rounded-md focus:border-2 focus:font-medium" type="number" placeholder="ZIP code" />
-                            <input className="p-2 max-md:w-full outline-none border rounded-md focus:border-2 focus:font-medium" type="number" placeholder="Phone Number" />
+                            <input className="p-2 w-full     max-md:w-full outline-none border rounded-md focus:border-2 focus:font-medium" type="number" placeholder="Phone Number" />
                         </div>
                         <div className="flex flex-col mb-6">
                             <select className="p-2 outline-none border rounded-md focus:border-2 focus:font-medium">
