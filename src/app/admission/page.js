@@ -89,7 +89,7 @@ const page = () => {
                             <p className="px-0 md:px-44 mb-20">Modernkids maktabi 2 yoshdan 6-sinfgacha uzluksiz ta'lim olishni taklif qiluvchi mehmon do'st hamjamiyatdir. Biz jamiyatimizga boylik va rang-baranglik qo'shadigan turli kelib chiqishi va oilalaridan bo'lgan talabalarni qabul qilishga intilamiz.</p>
                         </div>
                     </div>
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center gap-3 max-md:flex-wrap">
                         <div className="flex flex-col items-center gap-3 cursor-pointer w-96 h-72 rounded-xl hover:bg-[#F4F1EA] text-center">
                             <motion.div
                                 className="w-24 h-24 rounded-full bg-[#E74C25] hover:bg-[#0A303A] flex items-center justify-center mt-5"
@@ -100,7 +100,7 @@ const page = () => {
                             <Link className=" font-bold text-xl" href={'#'}>Birinchi qadam</Link>
                             <p>Ochiq eshiklar kunida Modernkidsga tashrif buyuring.</p>
                         </div>
-                        <Image width={140} height={140} src={'https://skole.vamtam.com/wp-content/uploads/2020/02/just_stroke.svg'} />
+                        <Image className="max-md:hidden" width={140} height={140} src={'https://skole.vamtam.com/wp-content/uploads/2020/02/just_stroke.svg'} />
                         <div className="flex flex-col items-center gap-3 cursor-pointer w-96 h-72 rounded-xl hover:bg-[#F4F1EA] text-center">
                             <motion.div
                                 className="w-24 h-24 rounded-full bg-[#167287] hover:bg-[#0A303A] flex items-center justify-center mt-5"
@@ -109,9 +109,9 @@ const page = () => {
                                 <h1 className="text-[#FFF] text-3xl font-extrabold">02</h1>
                             </motion.div>
                             <Link className=" font-bold text-xl" href={'#'}>Ikkinchi qadam</Link>
-                            <p>Ochiq eshiklar kunida Modernkidsga tashrif buyuring.</p>
+                            <p>Arizani tegishli to'lov bilan birga yuboring.</p>
                         </div>
-                        <Image width={140} height={140} src={'https://skole.vamtam.com/wp-content/uploads/2020/02/just_stroke.svg'} />
+                        <Image className="max-md:hidden" width={140} height={140} src={'https://skole.vamtam.com/wp-content/uploads/2020/02/just_stroke.svg'} />
                         <div className="flex flex-col items-center gap-3 cursor-pointer w-96 h-72 rounded-xl hover:bg-[#F4F1EA] text-center">
                             <motion.div
                                 className="w-24 h-24 rounded-full bg-[#7048B1] hover:bg-[#0A303A] flex items-center justify-center mt-5"
@@ -120,7 +120,7 @@ const page = () => {
                                 <h1 className="text-[#FFF] text-3xl font-extrabold">03</h1>
                             </motion.div>
                             <Link className=" font-bold text-xl" href={'#'}>Uchinchi qadam</Link>
-                            <p>Ochiq eshiklar kunida Modernkidsga tashrif buyuring.</p>
+                            <p>Qabul bo'limi bilan sayohatni rejalashtiring.</p>
                         </div>
                     </div>
                 </div>

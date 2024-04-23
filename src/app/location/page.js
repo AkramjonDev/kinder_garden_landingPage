@@ -1,7 +1,64 @@
 "use client"
+import { text } from "@fortawesome/fontawesome-svg-core";
+import axios from "axios";
 import { motion } from "framer-motion"
+import { useState } from "react"
 
 const Location = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    surName: "",
+    email: "",
+    phoneNumber: "",
+    study: "",
+    dateBirth: "",
+    data: ""
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const sendTelegramMessage = async () => {
+    const { firstName, surName, email, phoneNumber, study, dateBirth, data } = formData;
+    const message = `
+      Ismi: ${firstName}
+      Familiyasi: ${surName}
+      Email: ${email}
+      Telefon raqami: ${phoneNumber}
+      Qancha vaqt o'qishi: ${study}
+      Tug'ilgan yili: ${dateBirth}
+      Qo'shimcha ma'lumot: ${data}
+    `;
+
+    const botToken = "6965715696:AAG1Q0b1rVxupjYeXdDUutn30mgFdSSb9AE";
+    const chatId = "-1002001970729";
+
+    try {
+      await axios.post(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+        chat_id: chatId,
+        text: message,
+      });
+    } catch (error) {
+      console.log("Error sending message:", error);
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      await sendTelegramMessage();
+      // Optionally, you can add any other actions you want to perform after sending the message
+    } catch (error) {
+      console.log("Error handling form submission:", error);
+    }
+  };
+
   return (
     <div className=''>
       <div className="location mb-28 bg-[#F4F1EA] pt-28 pb-20 bg-cover bg-no-repeat bg-right" style={{ backgroundImage: "url('https://skole.vamtam.com/wp-content/uploads/2019/11/illustration-tree-2.svg')", backgroundSize: "300px" }}>
@@ -28,40 +85,50 @@ const Location = () => {
           </div>
           <div className="flex flex-col flex-grow">
             <h3 className="font-bold text-xl md:text-2xl mb-10">Ekskursiyani rejalashtiring</h3>
-            <div className="flex flex-col gap-3 md:flex-row md:gap-3 mb-6">
-              <input type="text" placeholder="Ism" className="p-2 outline-none border rounded-md focus:border-2 focus:font-medium" />
-              <input type="text" placeholder="Familiya" className="p-2 outline-none border rounded-md focus:border-2 focus:font-medium" />
-            </div>
-            <input className="p-2 outline-none border rounded-md focus:border-2 focus:font-medium mb-6" placeholder="Email" type="email" />
-            <div className="flex gap-3 mb-6 md:flex-row md:gap-3 max-md:flex-wrap max-md:w-full">
-              <input className="p-2 w-full max-md:w-full outline-none border rounded-md focus:border-2 focus:font-medium" type="number" placeholder="Phone Number" />
-            </div>
-            <div className="flex flex-col mb-6">
-              <p>Qancha vaqt farzandingizni o'qishini xohlaysiz ? <span className="text-[#E72929]">*</span></p>
-              <select className="p-2 outline-none border rounded-md focus:border-2 focus:font-medium">
-                <option>Ishonchim komil emas</option>
-                <option>1 oy</option>
-                <option>1-3 oy</option>
-                <option>3-6 oy</option>
-                <option>6-9 oy</option>
-                <option>9+ oy</option>
-              </select>
-            </div>
-            <div className="flex flex-col mb-6">
-              <p>Farzandingizni tug'ilgan sanasini ? <span className="text-[#E72929]">*</span></p>
-              <input className="p-2 outline-none border rounded-md focus:border-2 focus:font-medium" type="date" placeholder="Sana" />
-            </div>
-            <div className="flex flex-col">
-              <p>Maʼlumotlaringizni yuboring va biz tez orada sizga xat yuboramiz. Siz bilan tanishganimizdan xursandmiz!</p>
-              <input className="p-2 pb-16 mb-5 outline-none border rounded-md focus:border-2 focus:font-medium" type="text" placeholder="qoshimcha ma'lumot uchun" />
-              <motion.button
-                className="inline-block text-base px-5 py-2 bg-[#E74C25] text-[#fff] rounded-md font-bold hover:bg-[#0A303A]"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                Ma'lumotlarni yuborish
-              </motion.button>
-            </div>
+            <form onSubmit={handleSubmit}>
+              <div className="flex flex-col gap-3 md:flex-row md:gap-3 mb-6">
+                <input
+                  // value={formData.firstName}
+                  onChange={handleInputChange}
+                  type="text"
+                  placeholder="Ism"
+                  required
+                  className="p-2 outline-none border rounded-md focus:border-2 focus:font-medium"
+                />
+                <input type="text" placeholder="Familiya" className="p-2 outline-none border rounded-md focus:border-2 focus:font-medium" />
+              </div>
+              <input className="p-2 outline-none border rounded-md focus:border-2 focus:font-medium mb-6" placeholder="Email" type="email" />
+              <div className="flex gap-3 mb-6 md:flex-row md:gap-3 max-md:flex-wrap max-md:w-full">
+                <input className="p-2 w-full max-md:w-full outline-none border rounded-md focus:border-2 focus:font-medium" type="number" placeholder="Phone Number" />
+              </div>
+              <div className="flex flex-col mb-6">
+                <p>Qancha vaqt farzandingizni o'qishini xohlaysiz ? <span className="text-[#E72929]">*</span></p>
+                <select className="p-2 outline-none border rounded-md focus:border-2 focus:font-medium">
+                  <option>Ishonchim komil emas</option>
+                  <option>1 oy</option>
+                  <option>1-3 oy</option>
+                  <option>3-6 oy</option>
+                  <option>6-9 oy</option>
+                  <option>9+ oy</option>
+                </select>
+              </div>
+              <div className="flex flex-col mb-6">
+                <p>Farzandingizni tug'ilgan sanasini ? <span className="text-[#E72929]">*</span></p>
+                <input className="p-2 outline-none border rounded-md focus:border-2 focus:font-medium" type="date" placeholder="Sana" />
+              </div>
+              <div className="flex flex-col">
+                <p>Maʼlumotlaringizni yuboring va biz tez orada sizga xat yuboramiz. Siz bilan tanishganimizdan xursandmiz!</p>
+                <input className="p-2 pb-16 mb-5 outline-none border rounded-md focus:border-2 focus:font-medium" type="text" placeholder="qoshimcha ma'lumot uchun" />
+                <motion.button
+                  type="submit"
+                  className="inline-block text-base px-5 py-2 bg-[#E74C25] text-[#fff] rounded-md font-bold hover:bg-[#0A303A]"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  Ma'lumotlarni yuborish
+                </motion.button>
+              </div>
+            </form>
           </div>
         </div>
 
