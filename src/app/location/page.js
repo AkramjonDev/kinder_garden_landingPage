@@ -53,7 +53,6 @@ const Location = () => {
 
     try {
       await sendTelegramMessage();
-      // Optionally, you can add any other actions you want to perform after sending the message
     } catch (error) {
       console.log("Error handling form submission:", error);
     }

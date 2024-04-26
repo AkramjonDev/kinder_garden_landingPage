@@ -24,6 +24,10 @@
   font-family: "Catamaran", sans-serif;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: #fff;

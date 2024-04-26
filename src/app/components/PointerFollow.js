@@ -8,7 +8,7 @@ export default function PointFollower() {
   const { x, y } = useFollowPointer(ref);
 
   return (
-    <div className="parent-div" style={{ position: "relative",  }}>
+    <div className="parent-div" style={{ position: "relative" }}>
       <motion.div
         ref={ref}
         className="box"
@@ -17,7 +17,7 @@ export default function PointFollower() {
           type: "spring",
           damping: 3,
           stiffness: 50,
-          restDelta: 0.001
+          restDelta: 0.001,
         }}
       />
     </div>

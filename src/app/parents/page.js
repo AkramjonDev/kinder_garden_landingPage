@@ -67,7 +67,7 @@ const Page = () => {
                         <span className="text-[#E72929]">hi@kindergarten.com</span>
                     </div>
 
-                    <div className="flex flex-col flex-grow">
+                    <div id="regis" className="flex flex-col flex-grow">
                         <h3 className="font-bold text-xl md:text-2xl mb-10 text-[#0A2F38]">va ekskursiyani rejalashtiring</h3>
                         <div className="flex flex-col gap-3 md:flex-row md:gap-3 mb-6">
                             <input type="text" placeholder="Ism" className="w-full p-2 outline-none border rounded-md focus:border-2 focus:font-medium" />

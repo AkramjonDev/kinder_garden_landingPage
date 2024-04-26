@@ -1,10 +1,10 @@
 import YouTube from "react-youtube";
-import '../globals.css'
+import "../globals.css";
 
 const YoutubeVideo = ({ videoId }) => {
   const opts = {
-    width: '100%',
-    height: '100%',
+    width: "100%",
+    height: "100%",
   };
 
   return (
