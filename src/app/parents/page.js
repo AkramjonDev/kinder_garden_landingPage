@@ -152,7 +152,7 @@ const Page = () => {
             <h5 className="font-bold text-2xl mb-3">Surxondaryo viloyati</h5>
             <p>Qo'mqo'rg'on tumani</p>
             <h5 className="font-bold text-lg">Telefon raqamimiz:​</h5>
-            <span className="text-[#E72929]">+998917847242​</span>
+            <span className="text-[#E72929]">+998908317242​​​</span>
             <h5 className="font-bold text-lg">Email</h5>
             <span className="text-[#E72929]">hi@kindergarten.com</span>
           </div>
