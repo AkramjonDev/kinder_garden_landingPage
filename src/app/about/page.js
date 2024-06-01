@@ -31,7 +31,7 @@ function About() {
             width="610"
             height="382"
             className="absolute max-md:w-full max-md:ml-0 ml-44"
-            src="https://www.youtube.com/embed/3TXoCnyDy34?si=bwNrpl6dUGpjOBdD"
+            src="https://www.youtube.com/embed/j5Xe33ymViE?si=_74jOvHWBdh8YzMi"
             frameBorder="1"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
